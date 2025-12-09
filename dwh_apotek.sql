@@ -81,7 +81,8 @@ CREATE TABLE dim_pelanggan (
   nk_id_pelanggan INT NOT NULL,
   nama VARCHAR(100),
   jenis_kelamin VARCHAR(10),
-  alamat VARCHAR(MAX)
+  alamat VARCHAR(MAX),
+  no_telp VARCHAR(15)
 );
 
 CREATE TABLE dim_admin (
@@ -135,3 +136,4 @@ ALTER TABLE fact_transaksi ADD CONSTRAINT FK_Transaksi_Admin FOREIGN KEY (sk_adm
 ALTER TABLE fact_transaksi ADD CONSTRAINT FK_Transaksi_Supplier FOREIGN KEY (sk_supplier) REFERENCES dim_supplier(sk_supplier);
 
 GO
+
