@@ -5,17 +5,6 @@ Proyek ini mencakup seluruh tahapan pembangunan DWH berdasarkan metodologi **Kim
 
 ---
 
-## 📂 Struktur File
-
-| No | File | Deskripsi |
-|----|------|------------|
-| 1️⃣ | **`01_Create_DWH_Apotek.sql`** | Membuat struktur database **Data Warehouse** (`dwh_apotek`), termasuk tabel dimensi (`dim_waktu`, `dim_obat`, `dim_pelanggan`, `dim_admin`) dan tabel fakta (`fact_penjualan`) dengan relasi *Star Schema*. |
-| 2️⃣ | **`02_Insert_Dataset_DWH_Apotek.sql`** | Melakukan proses **ETL (Extract, Transform, Load)** untuk memindahkan data dari database operasional `db_apotek` ke `dwh_apotek`. Termasuk pembangkitan dimensi waktu dan pengisian data ke tabel fakta. |
-| 3️⃣ | **`03_Query_Analisis_DWH_Apotek.sql`** | Berisi kumpulan **query analisis OLAP** untuk menghasilkan laporan seperti total penjualan per tahun, obat terlaris, pelanggan aktif, dan performa admin/apoteker. |
-| 4️⃣ | **`db_apotek.sql`** | Database **OLTP (sumber data)** yang merepresentasikan sistem operasional apotek, terdiri dari tabel `tb_admin`, `tb_pelanggan`, `tb_obat`, `tb_transaksi`, dan `tb_detail_transaksi`. |
-
----
-
 ## 🧠 Tujuan Proyek
 
 - Membangun model **Data Warehouse Apotek** yang mampu menyimpan data historis penjualan dengan struktur analitis.  
