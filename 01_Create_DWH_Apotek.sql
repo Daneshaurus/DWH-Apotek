@@ -1,9 +1,9 @@
 /*
 =========================
-Create Data Warehouse (Revisi)
+Create Data Warehouse
 =========================
 Script Purpose:
-    Script ini digunakan untuk membuat ulang struktur Data Warehouse
+    Script ini digunakan untuk membuat struktur Data Warehouse
     (DWH) pada database dwh_apotek dengan perubahan:
     (1) Mengganti fact_penjualan menjadi fact_transaksi (untuk menampung Penjualan & Pembelian).
     (2) Menambahkan tabel dimensi dim_supplier.
@@ -133,4 +133,5 @@ ALTER TABLE fact_transaksi ADD CONSTRAINT FK_Transaksi_Obat FOREIGN KEY (sk_obat
 ALTER TABLE fact_transaksi ADD CONSTRAINT FK_Transaksi_Pelanggan FOREIGN KEY (sk_pelanggan) REFERENCES dim_pelanggan(sk_pelanggan);
 ALTER TABLE fact_transaksi ADD CONSTRAINT FK_Transaksi_Admin FOREIGN KEY (sk_admin) REFERENCES dim_admin(sk_admin);
 ALTER TABLE fact_transaksi ADD CONSTRAINT FK_Transaksi_Supplier FOREIGN KEY (sk_supplier) REFERENCES dim_supplier(sk_supplier);
+
 GO
